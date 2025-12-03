@@ -1,4 +1,4 @@
-Monitor de CPU em Tempo Real (Python)
+# Monitor de CPU em Tempo Real (Python)
 Uma aplicação Desktop desenvolvida com CustomTkinter que monitora a saúde do computador via telemetria.
 
 O que aprendi/apliquei:
