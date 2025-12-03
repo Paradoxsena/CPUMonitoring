@@ -24,13 +24,20 @@ class MonitorApp(ctk.CTk):
         uso_cpu = psutil.cpu_percent(interval=0) 
         
         self.label_porcentagem.configure(text=f"{uso_cpu}%")
-        
         self.barra_cpu.set(uso_cpu / 100)
         
-        if uso_cpu > 80:
-            self.label_porcentagem.configure(text_color="red")
+        #Sistema HMI Alarm Colors (Cores de Alarme na Interface Homem-Máquina).
+        if uso_cpu < 50:
+            nova_cor = "#2CC985" # Verde (Seguro)
+        elif uso_cpu < 60:
+            nova_cor = "#F1C40F" # Amarelo (Atenção)
+        elif uso_cpu < 70:
+            nova_cor = "#E67E22" # Laranja (Alerta)
         else:
-            self.label_porcentagem.configure(text_color="white")
+            nova_cor = "#E74C3C" # Vermelho (Crítico)
+
+        # Aplica a cor na barra
+        self.barra_cpu.configure(progress_color=nova_cor)
 
         self.after(1000, self.atualizar_hardware)
 
