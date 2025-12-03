@@ -9,7 +9,7 @@ Lógica de Refresh: Implementação de loops de atualização (callbacks) para m
 
 Tratamento de Dados: Conversão de dados brutos do sistema em feedback visual (barra de progresso).
 
-### 🚦 Lógica de Cores (HMI Alarm Colors)
+# 🚦 Lógica de Cores (HMI Alarm Colors)
 Implementei um sistema de feedback visual inspirado em interfaces industriais (HMI), onde a cor da barra indica a gravidade da carga de trabalho instantaneamente, permitindo que o operador avalie a situação sem precisar ler os números exatos:
 
 * **🟢 Verde (0% - 49%):** Operação Normal (Safe)
